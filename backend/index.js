@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 const mongoURI="mongodb+srv://admin:admin@taskcrud.qfc1vgl.mongodb.net/"
 
 app.use(express.json());
@@ -16,7 +16,7 @@ mongoose.connect(mongoURI,{
     .then(()=>{
         //listen for requests
         app.listen(port, ()=>{
-            console.log("connected to db & listening on port 3000");
+            console.log("connected to db & listening on port 5000");
         })
     })
     .catch((err)=>{
